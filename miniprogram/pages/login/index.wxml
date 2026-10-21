@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="heading">ResearchHub</view>
+  <view class="sub">科研受试者信息登记 · 第一期</view>
+  <view class="card">
+    <view class="heading">欢迎使用</view>
+    <view class="sub">请先登录，再填写人口统计学基本资料。不同科研项目可单独填写其专属问卷。</view>
+    <view class="sub">当前版本为本地技术演示，请勿填写真实受试者身份或健康数据。</view>
+    <button class="primary" loading="{{loading}}" bindtap="login">{{modeText}}</button>
+    <view wx:if="{{error}}" class="error">{{error}}</view>
+  </view>
+</view>

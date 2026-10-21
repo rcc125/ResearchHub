@@ -1,0 +1,39 @@
+
+# Python cache and test files
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+.coverage
+htmlcov/
+
+# Python virtual environments
+**/.venv/
+**/venv/
+
+# Environment variables and secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Private WeChat developer settings
+miniprogram/project.private.config.json
+
+# Local databases, backups and runtime data
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+*.log
+logs/
+data/
+backups/
+
+# Local project archive
+ResearchHub.zip
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

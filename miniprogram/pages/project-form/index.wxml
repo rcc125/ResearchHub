@@ -1,0 +1,15 @@
+<view class="container"><view class="heading">{{title}}</view><view class="sub">项目负责人：{{leaderName}}</view><view class="sub">项目专属字段由后端配置，填写后关联到当前项目。</view>
+  <view class="card">
+    <view wx:for="{{fields}}" wx:key="key" class="item">
+      <view class="label">{{item.label}}{{item.required?' *':''}}</view>
+      <picker wx:if="{{item.type==='select'}}" mode="selector" range="{{item.options}}" value="{{item.selectedIndex}}" data-key="{{item.key}}" bindchange="choose">
+        <view class="field">{{item.selectedText || '请选择'}} ▾</view>
+      </picker>
+      <input wx:elif="{{item.type==='text'}}" class="field" maxlength="200" value="{{item.currentValue}}" data-key="{{item.key}}" bindinput="textChange" placeholder="请输入"/>
+    </view>
+    <view class="sub">此处仅为演示问卷，不代表科研知情同意或资格审查完成。</view>
+    <button class="primary profile-action" loading="{{saving}}" bindtap="save">保存项目表单</button>
+    <button class="primary profile-action" disabled="{{!enrollmentId}}" bindtap="goFirstAppointment">预约第一次采集</button>
+    <view wx:if="{{message}}" class="success">{{message}}</view><view wx:if="{{error}}" class="error">{{error}}</view>
+  </view>
+</view>

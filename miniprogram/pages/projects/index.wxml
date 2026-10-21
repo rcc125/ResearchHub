@@ -1,0 +1,6 @@
+<view class="container"><view class="heading">科研项目预览</view><view class="sub">查看项目内容与负责人，选择项目后填写专属表单并预约首次采集。</view>
+  <view class="card" wx:for="{{projects}}" wx:key="id">
+    <view class="heading">{{item.title}}</view><view class="leader">项目负责人：{{item.leader_name}}</view><view class="sub">{{item.description}}</view>
+    <view class="muted">可预约时间：{{item.workdays_text}} · {{item.workday_start}}–{{item.workday_end}}</view>
+    <button class="primary profile-action" data-id="{{item.id}}" bindtap="openForm">查看项目并填写表单</button>
+  </view><view wx:if="{{error}}" class="error">{{error}}</view></view>

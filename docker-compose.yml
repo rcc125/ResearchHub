@@ -1,0 +1,21 @@
+
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: researchhub
+      MYSQL_USER: researchhub
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD:?Please set MYSQL_PASSWORD in .env}"
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:?Please set MYSQL_ROOT_PASSWORD in .env}"
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$$MYSQL_ROOT_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  mysql_data:

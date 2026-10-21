@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/profile/index",
+    "pages/projects/index",
+    "pages/project-form/index",
+    "pages/collections/index",
+    "pages/appointments/index",
+    "pages/appointment-create/index",
+    "pages/admin/index",
+    "pages/admin-collect/index",
+    "pages/admin-review/index",
+    "pages/personal-center/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "ResearchHub",
+    "navigationBarBackgroundColor": "#f5f9fc",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f9fc"
+  },
+  "style": "v2",
+  "tabBar": {
+    "color": "#74869a",
+    "selectedColor": "#167f9c",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/projects/index",
+        "text": "项目预览"
+      },
+      {
+        "pagePath": "pages/personal-center/index",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

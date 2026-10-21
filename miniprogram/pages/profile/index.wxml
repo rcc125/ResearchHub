@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="heading">人口统计学信息</view>
+  <view class="sub">通用信息仅需填写一次；各课题的补充信息独立填写。</view>
+  <view class="card">
+    <view wx:if="{{subjectCode}}" class="sub">受试者编号：{{subjectCode}}</view>
+    <view class="label">姓名 *</view>
+    <input class="field" value="{{name}}" maxlength="80" placeholder="请输入受试者姓名" bindinput="nameChange" />
+    <view class="label">性别</view>
+    <picker range="{{genders}}" value="{{genderIndex}}" bindchange="genderChange"><view class="field">{{genders[genderIndex]}} ▾</view></picker>
+    <view class="label">出生日期</view>
+    <picker mode="date" value="{{birthDate}}" end="{{today}}" bindchange="birthChange"><view class="field">{{birthDate || '请选择出生日期'}} ▾</view></picker>
+    <view class="label">身高（cm）</view>
+    <input class="field" type="digit" value="{{height}}" placeholder="例如 175" bindinput="heightChange" />
+    <view class="label">体重（kg）</view>
+    <input class="field" type="digit" value="{{weight}}" placeholder="例如 68" bindinput="weightChange" />
+    <view class="sub">BMI：{{bmi}}</view>
+    <button class="primary profile-action" loading="{{saving}}" bindtap="save">保存基础信息</button>
+    <button class="primary profile-action" bindtap="goProjects">选择科研项目</button>
+    <view wx:if="{{message}}" class="success">{{message}}</view>
+    <view wx:if="{{error}}" class="error">{{error}}</view>
+  </view>
+</view>

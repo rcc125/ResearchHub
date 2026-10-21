@@ -1,0 +1,4 @@
+<view class="container"><view class="heading">我的采集记录</view><view class="sub">每次采集独立记录，失败后可以申请重新预约。</view>
+<button class="primary wide-action" bindtap="appointments">查看我的预约</button>
+<view class="card" wx:for="{{items}}" wx:key="id"><view class="heading">{{item.project_title}}</view><view class="muted">{{item.collection_code}}</view><view class="item">第 {{item.attempt_no}} 次 · {{item.status}} · {{item.collected_at}}</view><view wx:if="{{item.failure_reason}}" class="muted">失败原因：{{item.failure_reason}}</view><button wx:if="{{item.status==='failed'}}" class="primary wide-action" data-enrollment="{{item.enrollment_id}}" data-collection="{{item.id}}" bindtap="book">申请重新预约</button></view>
+<view wx:if="{{!items.length}}" class="sub">暂无采集记录。请联系研究人员登记首次采集结果。</view><view class="error">{{error}}</view></view>

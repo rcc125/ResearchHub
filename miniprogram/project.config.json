@@ -1,0 +1,36 @@
+{
+  "description": "ResearchHub 第一期本地演示",
+  "miniprogramRoot": "./",
+  "projectname": "ResearchHub",
+  "appid": "wxd54bdf9066c41118",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": false,
+    "compileWorklet": false,
+    "minified": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "enhance": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "miniprogram",
+  "simulatorPluginLibVersion": {},
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {}
+}
